@@ -9,47 +9,22 @@
 <body>
   <div class="container">
   <form action="/action_page.php">
-    <table class="table">
-      <tr>
-        <td colspan="2" style="text-align:left"><p>Welcome back</p></td>
-        <tr>
-          <td><h1>Login to your account</h1></td>
-        </tr>
-        <tr>
-          <td><p>Email</p></td>
-        </tr>
-        <tr>
-          <td><input type="text" placeholder="email" required></td>
-        </tr>
-        <tr>
-          <td><p>Password</p></td>
-        </tr>
-        <tr>
-          <td><input type="password" name="password" placeholder="Password" required></td>
-        </tr>
-        <tr>
-          <td><input type="submit" value="Login now" class="LoginButton"></td>
-        </tr>      
-      </tr>
-    </table>
-      <a href="#" class="google btn"><i class="fa fa-google fa-fw">
-          </i> Login with Google
-        </a>
-    </div>
+    <div style="font-size: 16px; color:rgba(29, 28, 28, 0.938); margin-bottom: 10px;">Welcome back</div>
+    <div style="font-size: 25px; color:rgba(6, 6, 54, 0.952); margin-bottom: 20px;">Login to your account</div>
+    <label for="email" style="font-size: 16px; color: rgb(104, 100, 100)">Email</label>
+    <br>
+    <input type="text" id="email" email="email" required>
+    <br>
+    <label for="pwd" style="font-size: 16px; color: rgb(61, 60, 60)">Password</label>
+    <br>
+    <input type="password" id="pwd" value="password" required>
+    <p class="left">Remember me<span class="right">Forgot your password?</span></p>
+    <input type="submit" value="Login now" class="LoginButton">
+    <br>
+    <input type="submit" value="Or sign-in with Google" class="google">
+    <p class="grey">Don't have an account?<span class="purple">Join free today</span></p>
   </form>
-</div>
-
-<div class="bottom-container">
-  <div class="row">
-    <div class="col">
-      <a href="#" style="color:white" class="btn">Sign up</a>
-    </div>
-    <div class="col">
-      <a href="#" style="color:white" class="btn">Forgot password?</a>
-    </div>
   </div>
-</div>
-
 </body>
 </html>
 
