@@ -98,6 +98,18 @@ app.post("/teachers", function(req, res) {
   });
 });
 
+// Sends a delete message to the server
+$scope.deleteModule = function(code) {
+  // Send delete message to /module/code
+  $http.delete("/students/" + code).then(function(response) {
+    // When request completes, refresh list of students
+    $http.get("/students").then(function(response) {
+      $scope.students = response.data;
+    });
+  });
+};
+
+
 // Start listening the server on port localhost:3000
 app.listen(3000, function(err){
     if(err) {
