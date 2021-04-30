@@ -26,5 +26,13 @@ mainApp.controller("timetableController", function($scope, $http){
             // Alert user
             window.alert("Entry created.");
         });
-    };    
+    };   
+    
+        // Function will delete a record when user click on the delete record button
+        $scope.timetableDelete = function() {
+            $http.delete("/timetables" + $scope.selectedTimetable).then(function(response) {
+                // Alert user
+                window.alert("Entry delete");
+               });
+        };
 });
