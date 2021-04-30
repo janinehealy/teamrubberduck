@@ -139,6 +139,13 @@ app.post("/timetables", function(req, res) {
   });
 });
 
+app.delete("/timetables", function(req, res) {
+  // Call delete on the teachers on data
+  data.deleteTime(req.params, function() {
+      res.send("OK");
+  });
+});
+
 // Start listening the server on port localhost:3000
 app.listen(3000, function(err){
     if(err) {
