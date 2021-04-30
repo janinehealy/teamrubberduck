@@ -34,6 +34,14 @@ app.put("/students", function(req, res) {
     });
   });
 
+  // Delete students delete endpoint
+app.delete("/students", function(req, res) {
+  // Call delete on the students on data
+  data.delete/students(req.params, function() {
+    res.send("OK");
+  });
+});
+
 // Add Student Endpoint
 app.get("/student/:full_name", function(req, res){
     // Get Student by Name
@@ -43,7 +51,6 @@ app.get("/student/:full_name", function(req, res){
 });
 
 // Sends a delete message to the server
-
 app.delete("/students/:full_name").then(function(req, res) {
   // Delete Student by name 
     data.deleteStudent(req.params.full_name, function(studentName){
