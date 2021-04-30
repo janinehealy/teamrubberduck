@@ -186,6 +186,17 @@ exports.addTeachers = function(teacher, callback) {
     });  
 };
 
+// Deletes a student from the database
+exports.deleteTeachers = function(teacher, callback) {
+    //  SQL statement delete  student from the database 
+    var sql = `DELETE FROM Student WHERE teacher = ('${teacher.id}', '${teacher.full_name}', '${teacher.teacher_subject}', ${teacher.years_served}, ${teacher.salary}, '${teacher.address}', '${teacher.postal}', '${teacher.number}')`;
+    // Execute SQL delete statement
+    db.exec(sql, function(err) {
+      // Once completed, execute callback function
+      callback();
+    });
+  };
+
 // Add a Student module to the database
 exports.addStudents = function(student, callback) {
     // Create SQL insert statement
@@ -197,6 +208,17 @@ exports.addStudents = function(student, callback) {
     });
 };  
 
+// Deletes a student from the database
+exports.deleteStudents = function(student, callback) {
+    // Create SQL delete statement
+    var sql = `DELETE FROM Student WHERE student = ('${student.id}', '${student.full_name}', '${student.dob}', '${student.gender}')`;
+    // Execute SQL delete statement
+    db.exec(sql, function(err) {
+      // Once completed, execute callback function
+      callback();
+    });
+  };
+
 // Add a Timetable module to the database
 exports.addTimetables = function(timetable, callback) {
     // Create SQL insert statement
@@ -207,3 +229,18 @@ exports.addTimetables = function(timetable, callback) {
       callback();
     });
 };
+
+// Deletes a timetable from the database
+exports.deletetimetables = function(timetable, callback) {
+    // Create SQL delete statement
+    var sql = `DELETE FROM timetable WHERE timetable = ('${timetable.class_id}', '${timetable.teacher_id}', '${timetable.subject}', '${timetable.room_number}', '${timetable.day}', '${timetable.time})`;
+    // Execute SQL delete statement
+    db.exec(sql, function(err) {
+      // Once completed, execute callback function
+      callback();
+    });
+  };
+
+
+
+

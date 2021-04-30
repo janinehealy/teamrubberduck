@@ -27,4 +27,13 @@ mainApp.controller("teacherController", function($scope, $http){
             window.alert("Entry created.");
         });
     };
+
+    // Function will delete a record when user click on the delete record button
+    $scope.teacherDelete = function() {
+        $http.delete("/teacher" + $scope.selectedTeacher).then(function(response) {
+            // Alert user
+            window.alert("Entry delete.");
+        });
+    }
+
 });
