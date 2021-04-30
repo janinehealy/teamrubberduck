@@ -115,6 +115,22 @@ app.post("/teachers", function(req, res) {
   });
 });
 
+// Add /students post endpoint
+app.post("/students", function(req, res) {
+  // Call addModule on data
+  data.addStudents(req.body, function() {
+    res.send("OK");
+  });
+});
+
+// Add /timetables post endpoint
+app.post("/timetables", function(req, res) {
+  // Call addModule on data
+  data.addTimetables(req.body, function() {
+    res.send("OK");
+  });
+});
+
 // Start listening the server on port localhost:3000
 app.listen(3000, function(err){
     if(err) {

@@ -1,24 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
 body {
-    background-image: url("./login_background.png");
+    background-image: url("images/login_background.png");
     background-repeat: no-repeat;
     background-position: left top;
     background-attachment: fixed;
     background-color: #6c5ce7;
-    background-size: 670px;    
+    background-size: 670px;
+    font-family: roboto;
+    letter-spacing:0em;      
 }
 
 .container {
-    margin-left: 700px;
+    margin-left: 800px;
+    margin-top: 150px;
+    letter-spacing:0em
 }
 
-.LoginButton {
+input[type=text] {
+    width: 35%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: content-box;
+    border: 1px solid rgb(255, 238, 0);
+    border-radius: 4px;
+    background-color: #6c5ce7;  
+  }
+
+  input[type=password] {
+    width: 35%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: content-box;
+    border: 1px solid rgb(255, 238, 0);
+    border-radius: 4px;
+    background-color: #6c5ce7;  
+  }
+
+  .LoginButton {
+    width: 35%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: content-box;
+    border: 1px solid #6c5ce7;
+    border-radius: 4px;
     background-color:#55EFC4;
-	border-radius:5px;
-	display:inline-block;
 	cursor:pointer;
 	color: #6c5ce7;
-	font-family:Arial;
+	font-family:Roboto;
 	font-size:13px;
-	padding:09px 50px;
+}
 
+ 
+p.grey {
+    font-size: 13px; 
+    color:rgb(104, 100, 100);
+    position: absolute; 
+    bottom: 5px;
+    }
+p.left {
+    position: relative;
+    font-size: 13px; 
+    color:white;
+}
+span.right {
+    position: relative;
+    right:-70px;
+    color:rgb(104, 100, 100);
+}
+
+span.purple {
+    font-size: 13px; 
+    color: rgb(80, 8, 139); 
+    bottom: 5px;
+}
+
+.google {background-image: url("images/32.png");
+    background-repeat: no-repeat;
+    background-size: 16x16;
+    width: 35%;
+    box-sizing: content-box;
+    background-color: rgb(49, 48, 48);
+    cursor: pointer;
+    color: rgb(108, 92, 231);
+    font-family: Roboto;
+    font-size: 13px;
+    padding: 10px 20px;
+    margin: 8px 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(49, 48, 48);
+    border-image: initial;
+    border-radius: 4px;
 }
