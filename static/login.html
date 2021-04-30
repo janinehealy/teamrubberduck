@@ -3,28 +3,36 @@
 <head>
   <title>Login Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.js"></script>
   <script src="login.js"></script>
   <link rel="stylesheet" href="login_style.css">
 </head>
 <body>
-  <div class="container">
-  <form action="student_information.html"> <!--To link to the student information page (any email and psw allowed)-->
-    <div style="font-size: 16px; color:rgba(29, 28, 28, 0.938); margin-bottom: 10px;">Welcome back</div>
-    <div style="font-size: 25px; color:rgba(6, 6, 54, 0.952); margin-bottom: 20px;">Login to your account</div>
-    <label for="email" style="font-size: 16px; color: rgb(104, 100, 100)">Email</label>
-    <br>
-    <input type="text" id="email" email="email" required>
-    <br>
-    <label for="pwd" style="font-size: 16px; color: rgb(61, 60, 60)">Password</label>
-    <br>
-    <input type="password" id="pwd" value="password" required>
-    <p class="left">Remember me<span class="right">Forgot your password?</span></p>
-    <input type="submit" value="Login now" class="LoginButton">
-    <br>
-    <input type="submit" value="Or sign-in with Google" class="google">
-    <p class="grey">Don't have an account?<span class="purple">Join free today</span></p>
-  </form>
-  </div>
+    <div class="container">
+        <form action="student_information.html"> <!--To link to the student information page (any email and psw allowed)-->    
+            <!-- Heading -->
+            <div style="font-size: 16px; color:rgba(29, 28, 28, 0.938); margin-bottom: 10px;">Welcome back</div>
+            <div style="font-size: 25px; color:rgba(6, 6, 54, 0.952); margin-bottom: 20px;">Login to your account</div>
+
+            <!-- Email -->
+            <label for="email" style="font-size: 16px; color: rgb(104, 100, 100)">Email</label><br>
+            <input type="text" id="email" email="email" required><br>
+
+            <!-- Password -->
+            <label for="pwd" style="font-size: 16px; color: rgb(61, 60, 60)">Password</label><br>
+            <input type="password" id="pwd" value="password" required>
+
+            <!-- Remember me? -->
+            <p class="left">Remember me<span class="right">Forgot your password?</span></p>
+
+            <!-- Submit buttons -->
+            <input type="submit" value="Login now" class="LoginButton"><br>
+            <input type="submit" value="Or sign-in with Google" class="google">
+
+            <!-- Register links -->
+            <p class="grey">Don't have an account?<span class="purple">Join free today</span></p>
+        </form>
+    </div>
 </body>
 </html>
 
