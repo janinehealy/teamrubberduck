@@ -37,4 +37,3 @@ mainApp.controller("studentController", function($scope, $http){
     }
 
 });
-

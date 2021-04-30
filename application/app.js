@@ -42,6 +42,16 @@ app.get("/student/:full_name", function(req, res){
     });
 });
 
+// Sends a delete message to the server
+
+app.delete("/students/:full_name").then(function(req, res) {
+  // Delete Student by name 
+    data.deleteStudent(req.params.full_name, function(studentName){
+      res.json(studentName);
+    });
+});
+
+
 // Add Endpoint for all timetables
 app.get("/timetables", function(req, res) {
   // Return the data from getTimetables function
@@ -97,18 +107,6 @@ app.post("/teachers", function(req, res) {
     res.send("OK");
   });
 });
-
-// Sends a delete message to the server
-$scope.deleteModule = function(code) {
-  // Send delete message to /module/code
-  $http.delete("/students/" + code).then(function(response) {
-    // When request completes, refresh list of students
-    $http.get("/students").then(function(response) {
-      $scope.students = response.data;
-    });
-  });
-};
-
 
 // Start listening the server on port localhost:3000
 app.listen(3000, function(err){
