@@ -37,7 +37,7 @@ app.put("/students", function(req, res) {
   // Delete students delete endpoint
 app.delete("/students", function(req, res) {
   // Call delete on the students on data
-  data.delete/students(req.params, function() {
+  data.deletestudents(req.params, function() {
     res.send("OK");
   });
 });
@@ -106,6 +106,14 @@ app.put("/teachers", function(req, res) {
       res.send("OK");
     });
   });
+
+    // Delete teacher delete endpoint
+app.delete("/teachers", function(req, res) {
+  // Call delete on the teachers on data
+  data.deleteTeachers(req.params, function() {
+    res.send("OK");
+  });
+});
 
 // Add /teachers post endpoint
 app.post("/teachers", function(req, res) {
