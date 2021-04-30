@@ -107,19 +107,19 @@ app.put("/teachers", function(req, res) {
     });
   });
 
-    // Delete teacher delete endpoint
-app.delete("/teachers", function(req, res) {
-  // Call delete on the teachers on data
-  data.deleteTeachers(req.params, function() {
-    res.send("OK");
-  });
-});
-
 // Add /teachers post endpoint
 app.post("/teachers", function(req, res) {
   // Call addModule on data
   data.addTeachers(req.body, function() {
     res.send("OK");
+  });
+});
+
+// Delete teacher delete endpoint
+app.delete("/teachers", function(req, res) {
+  // Call delete on the teachers on data
+  data.deleteTeachers(req.params, function() {
+      res.send("OK");
   });
 });
 
