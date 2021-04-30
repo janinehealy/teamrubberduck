@@ -1,0 +1,14 @@
+<div ng-controller="LoginController">
+    <form action="/" id="myLogin"> <!--To link to the student information page (any email and psw allowed)-->
+    <label for="username" style="font-size: 16px; color: rgb(104, 100, 100)">Username</label>
+    <br>
+    <input type="text" id="username" ng-model="username" required>
+    <br>
+    <label for="password" style="font-size: 16px; color: rgb(61, 60, 60)">Password</label>
+    <br>
+    <input type="password" id="password" ng-model="password" required>
+    <p class="left">Remember me<span class="right">Forgot your password?</span></p>
+    <button type="button" class="LoginButton" ng-click="submit()">Login now</button>
+    <br>
+    </form>
+</div>

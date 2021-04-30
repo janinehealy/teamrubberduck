@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.js"></script>
+        <script src="login.js"></script>
+        <script src="angular.js"></script>
+        <script src="controller.js"></script>
+        <link rel="stylesheet" href="login_style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div style="font-size: 16px; color:rgba(29, 28, 28, 0.938); margin-bottom: 10px;">Welcome back</div>
+            <div style="font-size: 25px; color:rgba(6, 6, 54, 0.952); margin-bottom: 20px;">Login to your account</div>
+            <div ng-app="mainApp">
+                <div ng-view></div>
+            </div>
+        <input type="submit" value="Or sign-in with Google" class="google">
+        <p class="grey">Don't have an account?<span class="purple">Join free today</span></p>
+        
+        </div>
+    </body>
+</html>
