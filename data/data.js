@@ -230,5 +230,17 @@ exports.addTimetables = function(timetable, callback) {
     });
 };
 
+// Deletes a timetable from the database
+exports.deletetimetables = function(timetable, callback) {
+    // Create SQL delete statement
+    var sql = `DELETE FROM timetable WHERE timetable = ('${timetable.class_id}', '${timetable.teacher_id}', '${timetable.subject}', '${timetable.room_number}', '${timetable.day}', '${timetable.time})`;
+    // Execute SQL delete statement
+    db.exec(sql, function(err) {
+      // Once completed, execute callback function
+      callback();
+    });
+  };
+
+
 
 
